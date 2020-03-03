@@ -1,0 +1,37 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+
+#container {
+  display: flex;
+}
+
+#search-twitter {
+  display: flex;
+  width: 550px;
+}
+
+.invalid {
+  opacity: 0.5;
+}
+.note {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 0.75rem;
+}
+.error {
+  color: red;
+}
+
+#debug {
+  color: white;
+  font-size: 0.75rem;
+}
