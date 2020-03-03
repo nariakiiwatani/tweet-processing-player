@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>つぶやきProcessing Player</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="/run-twitter.js"></script>
+    <script src="/twitter-widget.js"></script>
+    <script src="/search-twitter.js"></script>
+    <script src="/client.js" defer></script>
+  </head>  
+  <body>
+    <h1>つぶやき(Tweet) Processing Player</h1>
+    <hr>
+    <div id="container">
+      <div id="editor">
+        <div id="search-twitter">
+          <section id="search">
+            <div>
+              <span>Search Twitter: </span><br />
+              <input class="value" size="32" value="#つぶやきProcessing createCanvas" /><br />
+              <button class="submit">go!</button>
+            </div>
+            <div id="index_arrow">
+              <button class="prev">&lt-</button>
+              <button class="next">-&gt</button>
+              <span class="index">0/0</span>
+            </div>
+          </section>
+          <section id="url">
+            <span>or input tweet URL or status ID here: </span><br />
+            <input class="value" size="32" /><br />
+            <button class="submit">get!</button>
+          </section>
+        </div>
+        <section id="widget">
+          <div class="widget"></div>
+        </section>
+      </div>
+      <div id="">
+        <section id="code">
+          <span>Also you can code or edit, paste here:</span>
+          <span class="error"></span><br />
+          <textarea class="value" cols="64" rows="12"></textarea><br />
+          <button class="submit">run!</button>
+        </section>
+        <section id="player">
+          <script>new p5();</script>
+        </section>
+      </div>
+    </div>
+    <hr>
+    <section id="debug">
+      this is debug 
+    </section>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+  </body>
+</html>
