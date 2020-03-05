@@ -31,9 +31,10 @@ class RunTwitter {
     });
   }
   runCode(callback) {
+    const parent_id = 'player';
     const code = this.code.value;
     const script = document.createElement("script");
-    const prepend = "remove(); new p5(null, 'player');";
+    const prepend = `remove(); new p5(null, ${parent_id});`;
     script.text = prepend+code;
     if(callback) callback(code);
     document.body.appendChild(script);
